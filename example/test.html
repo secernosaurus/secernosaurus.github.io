@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv=Content-Type content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+  <meta charset="utf-8" />
+  <title>example</title>
+  <link rel="stylesheet" href="../src/css/index.css">
+</head>
+<body>
+  <div id="inputValue" class="input-value">
+    <input type="text" placeholder="请选择日期" />
+  </div>
+  <div id="list" class="hidden tab">
+	</div>
+
+	<script type="text/javascript" src="../release/bundle.js"></script>
+	<script type="text/javascript">
+		// 获取类
+		let calendar = new DatePlugin();
+		// 获取日历对象
+		let doc = calendar.init();
+		// 获取时间，从星期几开始
+		let itemInner = document.getElementById("list");
+		// let doc = newDate();
+		itemInner.appendChild(doc);
+	</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+@media screen and (max-width:968PX) {
+  html {
+    font-size: calc(100vw/37.5);
+    background-color: #f6f6f6;
+  }
+  div#list {
+    width: 100%;
+  }
+}
+@media screen and (min-width:968PX) {
+  html {
+    font-size: 62.5%;
+    background-color: #f6f6f6;
+  }
+  div#list {
+    width: 80%;
+  }
+}
+/* 开始： 去除默认样式，添加通用样式 */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd{
+  margin:0;
+  padding: 0;
+}
+ul,ol,a{
+  list-style: none;
+  text-decoration: none;
+}
+* {
+  box-sizing: border-box;
+}
+/* 结束： 去除默认样式，添加通用样式 */
+#list {
+  width: 80%;
+  min-width: 280px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+}
+#list div {
+  display: flex;
+  justify-content: center;
+}
+#list ul {
+  display: flex;
+  justify-content: center;
+}
+#list div#calendar{
+  flex-direction: column;
+}
+ul li {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-grow: 1;
+  width: 14%;
+  position: relative;
+}
+ul li::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 999;
+}
+#list.show {
+  display: block;
+}
+#list.hidden {
+  display: none;
+}
+.bgcolor {
+  color: #E1E4E7;
+}
+/* 上月，下月按钮 */
+div#header {
+  display: flex;
+  justify-content: space-between;
+}
+#header,ul#week,.top-btn {
+  height: 40px;
+  line-height: 40px;
+}
+#header a {
+  width: 14%;
+  text-align: center;
+  cursor: pointer;
+  color: black;
+}
+#calendar ul li span {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  align-self: center;
+}
+.calendar {
+  flex-direction: column;
+}
+div#header.center {
+  justify-content: space-between;
+}
+.sel-color {
+  background-color: #4196F7;
+  border-radius: 4px;
+  color: #ffffff;
+  box-shadow: 0 13px 12px -11px #83A4D9;
+}
+/* 控制日历显示和隐藏 */
+.input-value {
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  margin: 50px auto;
+}
+.input-value input{
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 30px;
+  line-height: 30px;
+  padding: 5px 0 5px 10px;
+}
+/* 头部按钮 */
+#list .top-btn {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dddddd;
+}
+.cancel, .determine {
+  width: 14%;
+  text-align: center;
+  color: #4196F7;
+  cursor: pointer;
+}
